@@ -89,7 +89,7 @@ contentApp.directive('carousel', function() {
 
 contentApp.controller('GistListCtrl', ['$scope', '$http', '$templateCache', 
 	function($scope, $http, $templateCache) {
-	  	$scope.url = 'http://localhost:3000/api/v0/gists?api_key=special-key&neo4j=false';
+	  	$scope.url = 'http://graphgist-cms-api.herokuapp.com/api/v0/gists?api_key=special-key&neo4j=false';
 	  	$scope.gists = [];
 
 	  	var fetchGists = function()
@@ -192,8 +192,8 @@ contentApp.directive('carouselrelatedgists', function() {
 
 contentApp.controller('GistItemCtrl', ['$scope', '$routeParams', '$http', '$templateCache',
   function($scope, $routeParams, $http, $templateCache) {
-  		console.log('http://localhost:3000/api/v0/gists/title/' + encodeURIComponent(decodeURI(decodeURI($routeParams.gistId))) + '?api_key=special-key&neo4j=false');
-  		$scope.url = 'http://localhost:3000/api/v0/gists/title/' + encodeURIComponent(decodeURI(decodeURI($routeParams.gistId))) + '?api_key=special-key&neo4j=false';
+  		console.log('http://graphgist-cms-api.herokuapp.com/api/v0/gists/title/' + encodeURIComponent(decodeURI(decodeURI($routeParams.gistId))) + '?api_key=special-key&neo4j=false');
+  		$scope.url = 'http://graphgist-cms-api.herokuapp.com/api/v0/gists/title/' + encodeURIComponent(decodeURI(decodeURI($routeParams.gistId))) + '?api_key=special-key&neo4j=false';
 	  	var fetchGist = function()
 	  	{
 	  		$http({method: 'GET', url: $scope.url, cache: $templateCache}).
@@ -294,8 +294,8 @@ contentApp.directive('carouselrelatedpeople', function() {
 
 contentApp.controller('PeopleItemCtrl', ['$scope', '$routeParams', '$http', '$templateCache',
   function($scope, $routeParams, $http, $templateCache) {
-  		console.log('http://localhost:3000/api/v0/people/name/' + encodeURIComponent(decodeURI(decodeURI($routeParams.peopleId))) + '?api_key=special-key&neo4j=false');
-  		$scope.url = 'http://localhost:3000/api/v0/people/name/' + encodeURIComponent(decodeURI(decodeURI($routeParams.peopleId))) + '?api_key=special-key&neo4j=false';
+  		console.log('http://graphgist-cms-api.herokuapp.com/api/v0/people/name/' + encodeURIComponent(decodeURI(decodeURI($routeParams.peopleId))) + '?api_key=special-key&neo4j=false');
+  		$scope.url = 'http://graphgist-cms-api.herokuapp.com/api/v0/people/name/' + encodeURIComponent(decodeURI(decodeURI($routeParams.peopleId))) + '?api_key=special-key&neo4j=false';
 	  	var fetchPeople = function()
 	  	{
 	  		$http({method: 'GET', url: $scope.url, cache: $templateCache}).
